@@ -1,6 +1,5 @@
 <template>
-  <div class="PatrolPath">
-    <h1>巡查轨迹测试页面</h1>
+  <div class="Test1">
     <!-- <iframe style="width:100%;height:50%;" :src="this.getStaticPath('/static/ArcGisTest2.html')" frameborder="0"></iframe> -->
     <div id="viewDiv" class="balt-theme"></div>
   </div>
@@ -18,9 +17,13 @@ export default {
       // const options = {
       //   url: 'https://js.arcgis.com/4.6/'
       // };
+      // const options = {
+      //   url: 'http://localhost/arcgis/arcgis_js_api/library/4.6/dojo/dojo.js',
+      //   css: 'http://localhost/arcgis/arcgis_js_api/library/4.6/esri/css/main.css'
+      // }
       const options = {
-        url: 'http://localhost:8088/arcgis_js_api/library/4.6/dojo/dojo.js',
-        css: 'http://localhost:8088/arcgis_js_api/library/4.6/esri/css/main.css'
+        url: '/static/arcgis_js_api/library/4.6/dojo/dojo.js',
+        css: '/static/arcgis_js_api/library/4.6/esri/css/main.css'
       }
       esriLoader.loadModules(['esri/views/MapView', 'esri/WebMap'], options)
         .then(([MapView, WebMap]) => {
@@ -126,9 +129,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  .PatrolPath {
+  .Test1 {
     position: absolute;
-    top: 0;
+    top: 35px;
     bottom: 0;
     width: 100%;
     overflow-y: auto;

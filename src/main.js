@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 加载公共样式
+import '@/assets/less/base.less'
+import '@/assets/less/common.less'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
