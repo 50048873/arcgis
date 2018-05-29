@@ -7,6 +7,7 @@
 
 <script>
 import * as esriLoader from 'esri-loader'
+import {options} from '@/assets/js/config'
 export default {
   data () {
     return {
@@ -14,17 +15,6 @@ export default {
   },
   methods: {
     init1 () {
-      // const options = {
-      //   url: 'https://js.arcgis.com/4.6/'
-      // };
-      // const options = {
-      //   url: 'http://localhost/arcgis/arcgis_js_api/library/4.6/dojo/dojo.js',
-      //   css: 'http://localhost/arcgis/arcgis_js_api/library/4.6/esri/css/main.css'
-      // }
-      const options = {
-        url: '/static/arcgis_js_api/library/4.7/dojo/dojo.js',
-        css: '/static/arcgis_js_api/library/4.7/esri/css/main.css'
-      }
       esriLoader.loadModules(['esri/views/MapView', 'esri/WebMap'], options)
         .then(([MapView, WebMap]) => {
           // then we load a web map from an id
@@ -52,7 +42,7 @@ export default {
         'esri/widgets/BasemapToggle',
         'esri/tasks/Locator',
         'dojo/domReady!'
-      ]).then(([Map, MapView, BasemapToggle, Locator]) => {
+      ], options).then(([Map, MapView, BasemapToggle, Locator]) => {
         // Create the Map
         var map = new Map({
           basemap: 'hybrid'
@@ -121,7 +111,7 @@ export default {
     }
   },
   mounted () {
-    this.init2()
+    this.init1()
   },
   created () {
 

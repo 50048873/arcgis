@@ -20,7 +20,7 @@ export default {
           path: '/test1'
         },
         {
-          title: 'Test2',
+          title: 'Intro to SceneView',
           path: '/test2'
         }
       ]
