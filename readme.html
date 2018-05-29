@@ -22,25 +22,25 @@
 					<p>官网配置法：参照arcgis_js_api/library/downloads/install-windows/index.html安装说明</p>
 				</li>
 				<li>
-					<p>wamp配置法：拷贝arcgis_js_api到wamp/www/arcgis/目录下，将wamp/www/arcgis/arcgis_js_api/4.6/init.js和wamp/www/arcgis/arcgis_js_api/4.6/dojo/dojo.js文件里的[HOSTNAME_AND_PATH_TO_JSAPI]替换成"http://localhost/arcgis/arcgis_js_api/library/4.6/"，这种配置会因为跨域找不到字体图标</p>
+					<p>wamp配置法：拷贝arcgis_js_api到wamp/www/arcgis/目录下，将wamp/www/arcgis/arcgis_js_api/4.7/init.js和wamp/www/arcgis/arcgis_js_api/4.7/dojo/dojo.js文件里的https://[HOSTNAME_AND_PATH_TO_JSAPI]替换成"http://localhost/arcgis/arcgis_js_api/library/4.7/"，这种配置会因为跨域找不到字体图标</p>
 					<p>项目引用时：</p>
 					<p>
 						<pre>
 							const options = {
-							    url: 'http://localhost/arcgis/arcgis_js_api/library/4.6/dojo/dojo.js',
-							    css: 'http://localhost/arcgis/arcgis_js_api/library/4.6/esri/css/main.css'
+							    url: 'http://localhost/arcgis/arcgis_js_api/library/4.7/dojo/dojo.js',
+							    css: 'http://localhost/arcgis/arcgis_js_api/library/4.7/esri/css/main.css'
 							}
 						</pre>
 					</p>
 				</li>
 				<li>
-					<p>vue项目配置法：将arcgis_js_api拷贝到vue项目的static目录下，将wamp/www/arcgis/arcgis_js_api/4.6/init.js和wamp/www/arcgis/arcgis_js_api/4.6/dojo/dojo.js文件里的[HOSTNAME_AND_PATH_TO_JSAPI]替换成"/static/"</p>
+					<p>vue项目配置法：将arcgis_js_api拷贝到vue项目的static目录下，将wamp/www/arcgis/arcgis_js_api/4.7/init.js和wamp/www/arcgis/arcgis_js_api/4.7/dojo/dojo.js文件里的https://[HOSTNAME_AND_PATH_TO_JSAPI]替换成"/static/"</p>
 					<p>项目引用时：</p>
 					<p>
 						<pre>
 							const options = {
-							    url: '/static/arcgis_js_api/library/4.6/dojo/dojo.js',
-							    css: '/static/arcgis_js_api/library/4.6/esri/css/main.css'
+							    url: '/static/arcgis_js_api/library/4.7/dojo/dojo.js',
+							    css: '/static/arcgis_js_api/library/4.7/esri/css/main.css'
 						    }
 						</pre>
 					</p>

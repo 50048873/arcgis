@@ -22,8 +22,8 @@ export default {
       //   css: 'http://localhost/arcgis/arcgis_js_api/library/4.6/esri/css/main.css'
       // }
       const options = {
-        url: '/static/arcgis_js_api/library/4.6/dojo/dojo.js',
-        css: '/static/arcgis_js_api/library/4.6/esri/css/main.css'
+        url: '/static/arcgis_js_api/library/4.7/dojo/dojo.js',
+        css: '/static/arcgis_js_api/library/4.7/esri/css/main.css'
       }
       esriLoader.loadModules(['esri/views/MapView', 'esri/WebMap'], options)
         .then(([MapView, WebMap]) => {
@@ -121,7 +121,7 @@ export default {
     }
   },
   mounted () {
-    this.init1()
+    this.init2()
   },
   created () {
 
@@ -147,7 +147,6 @@ export default {
 #viewDiv {
   height: 60%;
   width: 100%;
-  background-color: lime;
 }
 
 table th {
