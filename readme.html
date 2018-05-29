@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>问题记录</title>
+</head>
+<body>
+	<ul>
+		<li>
+			<h3>初始化项目npm run dev后报错，原因node_modules/prettier的1.13.0版本导致的。直接删除报错版本，找个prettier@~1.12.0版本复制粘贴。</h3>
+		</li>
+		<li>
+			<h3>配置build/webpack.dev.conf.js，const HOST = process.env.HOST || '0.0.0.0'，增加本机ip访问和无线ip访问</h3>
+		</li>
+		<li>
+			<h3>初始化项目和正式开发时，建议默认开启eslint；如果调试时有需要，可以config/index.js里将useEslint设置为false</h3>
+		</li>
+		<li>
+			<h3>配置本地arcgis：<a href="https://developers.arcgis.com/downloads/apis-and-sdks?product=javascript">（下载地址，用google账号登录后才能下载）</a></h3>
+			<ul>
+				<li>
+					<p>官网配置法：参照arcgis_js_api/library/downloads/install-windows/index.html安装说明</p>
+				</li>
+				<li>
+					<p>wamp配置法：拷贝arcgis_js_api到wamp/www/arcgis/目录下，将wamp/www/arcgis/arcgis_js_api/4.6/init.js和wamp/www/arcgis/arcgis_js_api/4.6/dojo/dojo.js文件里的[HOSTNAME_AND_PATH_TO_JSAPI]替换成"http://localhost/arcgis/arcgis_js_api/library/4.6/"，这种配置会因为跨域找不到字体图标</p>
+					<p>项目引用时：</p>
+					<p>
+						<pre>
+							const options = {
+							    url: 'http://localhost/arcgis/arcgis_js_api/library/4.6/dojo/dojo.js',
+							    css: 'http://localhost/arcgis/arcgis_js_api/library/4.6/esri/css/main.css'
+							}
+						</pre>
+					</p>
+				</li>
+				<li>
+					<p>vue项目配置法：将arcgis_js_api拷贝到vue项目的static目录下，将wamp/www/arcgis/arcgis_js_api/4.6/init.js和wamp/www/arcgis/arcgis_js_api/4.6/dojo/dojo.js文件里的[HOSTNAME_AND_PATH_TO_JSAPI]替换成"/static/"</p>
+					<p>项目引用时：</p>
+					<p>
+						<pre>
+							const options = {
+							    url: '/static/arcgis_js_api/library/4.6/dojo/dojo.js',
+							    css: '/static/arcgis_js_api/library/4.6/esri/css/main.css'
+						    }
+						</pre>
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
