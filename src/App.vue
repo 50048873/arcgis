@@ -20,8 +20,20 @@ export default {
           path: '/test1'
         },
         {
-          title: 'Intro to SceneView',
+          title: 'IntroToSceneView',
           path: '/test2'
+        },
+        {
+          title: 'IntroToLayers',
+          path: '/test3'
+        },
+        {
+          title: 'IntroToPopups',
+          path: '/test4'
+        },
+        {
+          title: 'WebScene',
+          path: '/test5'
         }
       ]
     }
