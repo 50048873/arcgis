@@ -19,11 +19,10 @@ export default {
         'esri/views/SceneView',
         'esri/WebScene',
         'esri/config',
-        // 'esri/dom',
         'dojo/domReady!'
       ], options).then(([SceneView, WebScene, esriConfig]) => {
         esriConfig.portalUrl = 'https://dsdz.maps.arcgis.com'
-        // var titleDiv = dom.byId('titleDiv')
+        var titleDiv = document.getElementById('titleDiv')
         var scene = new WebScene({
           portalItem: {
             id: 'e0b5af3401b14d989149cc95fc79dc8e'
@@ -36,10 +35,19 @@ export default {
             top: 40
           }
         })
-        // view.then(function() {
-        //   var title = scene.portalItem.title
-        //   titleDiv.innerHTML = title
-        // })
+        view.when(function() {
+          var title = scene.portalItem.title
+          titleDiv.innerHTML = title
+        })
+        view.on('click', function(e) {
+          var screenPoint = {
+            x: e.x,
+            y: e.y
+          }
+          view.hitTest(screenPoint).then(function(res) {
+            console.log(res)
+          })
+        })
       }).catch(err => {
         // handle any errors
         console.error(err)

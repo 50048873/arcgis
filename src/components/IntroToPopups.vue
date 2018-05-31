@@ -20,7 +20,6 @@ export default {
         'esri/views/MapView',
         'dojo/domReady!'
       ], options).then(([Locator, Map, MapView]) => {
-        console.log(Locator)
         var locatorTask = new Locator({
            url: "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
         });
@@ -39,6 +38,17 @@ export default {
           event.stopPropagation()
           var lat = Math.round(event.mapPoint.latitude * 1000) / 1000
           var lon = Math.round(event.mapPoint.longitude * 1000) / 1000
+          view.popup.open({
+            title: "Reverse geocode: [" + lon + ", " + lat + "]",
+            location: event.mapPoint
+          })
+          locatorTask.locationToAddress(event.mapPoint).then(function(response) {
+            // If an address is successfully found, show it in the popup's content
+            view.popup.content = response.address;
+          }).catch(function(err) {
+            // If the promise fails and no result is found, show a generic message
+            view.popup.content = "No address was found for this location";
+          })
         })
       }).catch(err => {
         // handle any errors
