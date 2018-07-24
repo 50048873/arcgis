@@ -25,7 +25,7 @@ export default {
         var titleDiv = document.getElementById('titleDiv')
         var scene = new WebScene({
           portalItem: {
-            id: 'e0b5af3401b14d989149cc95fc79dc8e'
+            id: '550baa44134940a6b53b117714932a3c'
           }
         })
         var view = new SceneView({

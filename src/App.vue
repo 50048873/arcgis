@@ -16,7 +16,7 @@ export default {
     return {
       tab: [
         {
-          title: 'Test1',
+          title: 'MapView',
           path: '/test1'
         },
         {
@@ -34,6 +34,10 @@ export default {
         {
           title: 'WebScene',
           path: '/test5'
+        },
+        {
+          title: '2d-3d切换',
+          path: '/test6'
         }
       ]
     }

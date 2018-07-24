@@ -135,7 +135,7 @@ export default {
 }
 
 #viewDiv {
-  height: 60%;
+  height: 100%;
   width: 100%;
 }
 

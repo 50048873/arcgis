@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Test1 from '@/components/Test1'
+import MapView from '@/components/MapView'
 import IntrotoSceneView from '@/components/IntrotoSceneView'
 import IntroToLayers from '@/components/IntroToLayers'
 import IntroToPopups from '@/components/IntroToPopups'
 import WebScene from '@/components/WebScene'
+import ToggleView from '@/components/ToggleView'
 
 Vue.use(Router)
 
@@ -14,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/test1',
-      name: 'Test1',
-      component: Test1
+      name: 'MapView',
+      component: MapView
     },
     {
     	path: '/test2',
@@ -36,6 +37,11 @@ export default new Router({
     	path: '/test5',
     	name: 'WebScene',
     	component: WebScene
+    },
+    {
+      path: '/test6',
+      name: 'ToggleView',
+      component: ToggleView
     }
   ]
 })
